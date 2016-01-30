@@ -5,7 +5,7 @@ public class EnemyBullet : MonoBehaviour
 {
 
     public Vector2 direction;
-    public float speed = 25;
+    public float speed = 5;
 
     void Update()
     {
@@ -16,7 +16,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-
+            GameManager.instance.dealDMG(5);
         }
         Destroy(this.gameObject);
     }
